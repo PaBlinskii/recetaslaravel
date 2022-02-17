@@ -6,9 +6,16 @@ php artisan make:controller RecetaController
 // Crear un controller con invokable 
 php artisan make:controller RecetaController -i
 
-public function hola()
-    {
-        return "Desde RecetaController";
-    }
+// Añadir Autenticacion a Laravel
+composer require laravel/ui   
+//no funciono
 
-Route::get('/nosotros', 'RecetaController@hola');
+composer require laravel/ui:^2.4
+
+//funcionó este:
+composer require laravel/ui:^2.x
+
+// Crea un Panel Básico de autentificación
+php artisan ui:auth
+
+

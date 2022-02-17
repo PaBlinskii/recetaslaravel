@@ -1,0 +1,42 @@
+COMANDOS iniciar proyecto en laravel
+
+- Instalar PHP y variable de entorno
+
+crear variable de entorno y nombrarla:
+php
+C:\tools\php80
+
+-Instalar laravel
+
+composer global require laravel/installer
+
+*** Al instalar laravel hay que navegar en esta direccion 
+*** C:\Users\Kime\AppData\Roaming\Composer\vendor\bin
+*** ir a variables de entorno y en Path darle editar y agregar nueva C:\Users\Kime\AppData\Roaming\Composer\vendor\bin
+
+- Primer comando laravel en clase:
+
+laravel new sitio
+
+*** salieron errores y hay que crear una carpeta .\desktop\php 
+*** seguido el comando  php -S localhost:333   (cualquier puerto)
+*** En la fila "Loaded Configuration File" ver la dirección C:\tools\php80\php.ini
+
+-Ejecutar esto:
+C:\tools\php80\php.ini
+
+al abrir el archivo editarlo
+
+descomentar este (Fila 928)
+;extension=fileinfo
+
+*** Después ya podemos seguir...
+
+-Comando del video para crear el proyecto de Recetas:
+composer create-project laravel/laravel=^7 recetaslaravel --prefer-dist
+*** no funcionó
+
+-solución en preguntas:
+composer create-project laravel/laravel=>7 recetaslaravel --prefer-dist
+ó
+composer create-project laravel/laravel=~7 recetaslaravel --prefer-dist

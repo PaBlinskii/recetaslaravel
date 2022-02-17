@@ -1,0 +1,10 @@
+Comandos Laravel
+
+// Crear un controller
+php artisan make:controller
+
+// Crear servidor artisan
+php artisan serve
+// Especificar puerto
+php artisan serve --port:8000	
+
