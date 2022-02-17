@@ -1,0 +1,14 @@
+
+// Crear un controller
+
+php artisan make:controller RecetaController
+
+// Crear un controller con invokable 
+php artisan make:controller RecetaController -i
+
+public function hola()
+    {
+        return "Desde RecetaController";
+    }
+
+Route::get('/nosotros', 'RecetaController@hola');
