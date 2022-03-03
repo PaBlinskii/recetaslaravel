@@ -11,6 +11,7 @@ composer require laravel/ui
 //no funciono
 
 composer require laravel/ui:^2.4
+composer require laravel/ui:~2.4
 
 //funcionó este:
 composer require laravel/ui:^2.x
@@ -18,4 +19,51 @@ composer require laravel/ui:^2.x
 // Crea un Panel Básico de autentificación
 php artisan ui:auth
 
+// Instalar bootstrap
+php artisan ui bootstrap
+
+// Instalar vue en laravel
+php artisan ui vue
+
+// Luego instalar las dependencias de npm
+npm install
+
+// Para correr los estilos es necesario correr el npm run dev
+npm run dev
+// esto se hace cada vez que se modifique el estilo
+// Si queremos que se este actualizando automaticamente se usa watch
+npm run watch
+
+// carpetas usadas:
+/resources/sass/
+
+// Interactuar con la aplicacion usando tinker
+php artisan tinker
+// Al salir la shell se uso lo siguiente
+$usuario = new User;
+$usuario->name = "Kime 2";
+$usuario
+// traer por id
+User::find(1);
+User::find(2);
+// para salir
+exit;
+
+// En el archivo register.blade.php en linea 11 se incrustó: novalidate  para ver los campos obligatorios al ir vacios
+// en app/Controllers/auth/RegisterController se encuentra la funcion para validar: function validator(array $data) y se le agrega 
+'url' => ['required', 'string', 'url']
+
+// Para que se guarde en la base de datos la url hay que buscar la funcion: protected function create(array $data) y agregar
+'url' => $data['url'],
+
+// @yield son las areas del front
+// en el index.blade.php se inserto @extends('layouts.app')
+// @section('content')
+
+// Se elimino RecetaController.php de los archivos y se uso el comando php artisan help make:controller
+// Se creo un nuevo controller de la siguiente manera pero antes se comentó en web.php el codigo Route::get('/recetas', 'RecetaController'); para que funcionara la creación de nuevo controller
+php artisan make:controller RecetaController -r
+
+// se visitó el siguiente link 
+https://laravel.com/docs/7.x/controllers#resource-controllers
 

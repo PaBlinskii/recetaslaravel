@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,12 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/recetas', 'RecetaController');
+// Route::get('/recetas', 'RecetaController');
 
+
+Auth::routes();
 
 // Route::get('/nosotros', 'RecetaController'); // Usando __invoke
 // Route::get('/nosotros', 'RecetasController@hola');
 // Route::get('/nosotros',[RecetaController::class, 'hola']); // En Laravel 8
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
+
+// Route::get('/home', 'HomeController@index')->name('home');

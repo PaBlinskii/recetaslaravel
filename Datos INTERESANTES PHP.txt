@@ -1,0 +1,35 @@
+// Uso de :: , -> y =>
+
+Si te refieres a "->" es el utilizado para referirse a un método u objeto dentro de un objeto. En otros lenguajes se utiliza el punto ".". Por ejemplo:
+
+    Class MiClase{
+       public $x = 0; //Variable pública de la clase "Miclase
+       public miMetodo(){
+           //... Contenido del método
+       }
+    }
+    $objeto = new MiClase();
+    $objeto->x = 5; //Se usa -> para "usar" la variable del objeto
+    $objeto->miMetodo(); //Lo mismo para usar el método
+El Operador => se utiliza como asignación de valores para un array. Por ejemplo:
+
+   $miArray = array(
+       'clave' => 'valor'
+   );
+
+
+--Otro ejemplo:
+
+En php, los carácteres "->" hacen referencia a un objeto.
+
+El típico ejemplo:
+
+$coche->endender()
+$coche->apagar()
+Los carácteres "=>" son el operador igual o mayor que, (que también se utilizan en otras partes como en los vectores asociativos):
+
+$coche = array(
+    'marca' => 'SEAT',
+    'color' => 'blanco',
+    'modelo' => 'Ibiza'
+);

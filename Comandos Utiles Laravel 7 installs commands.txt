@@ -30,6 +30,13 @@ al abrir el archivo editarlo
 descomentar este (Fila 928)
 ;extension=fileinfo
 
+////////////////////////////////////////////////////////////
+Si contáis con problemas de command not found o similar, 
+seguid los pasos de esta guia https://gist.github.com/operatino/392614486ce4421063b9dece4dfe6c21
+
+básicamente es incluir esta línea de código en la terminal  brew link mysql@5.7 --force
+////////////////////////////////////////////////////////////
+
 *** Después ya podemos seguir...
 
 -Comando del video para crear el proyecto de Recetas:
@@ -40,3 +47,6 @@ composer create-project laravel/laravel=^7 recetaslaravel --prefer-dist
 composer create-project laravel/laravel=>7 recetaslaravel --prefer-dist
 ó
 composer create-project laravel/laravel=~7 recetaslaravel --prefer-dist
+
+instalar version de php 
+choco install php --version=7.4.6
